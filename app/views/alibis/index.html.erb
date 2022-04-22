@@ -1,0 +1,12 @@
+<div class="list">
+    <% @alibis.reverse.each do |alibi| %>
+        <a class="alibi" href="<%= alibi_path(alibi) %>">
+            <span class="logotext">The Daily Alibi</span>
+            <span><%= alibi.title %></span>
+            <span class="small"><%= alibi.created_at.strftime('%b %d %Y') %></span>
+        </a>
+    <% end %>
+    <% if @alibis.length == 0 %>
+        <span>There are no alibis yet...</span>
+    <% end %>
+</div>

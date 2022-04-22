@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>TheDailyAlibi</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+    <%= stylesheet_link_tag 'application.css' %>
+    <%= stylesheet_link_tag 'https://fontlibrary.org//face/chomsky' %>
+    <%= javascript_importmap_tags %>
+  </head>
+
+  <body>
+    <nav>
+      <div class="row">
+        <a href="/" class="home">Home</a>
+        <a href="/" class="logo">The Daily Alibi</a>
+      </div>
+      <hr class="topSplit">
+    </nav>
+    <%= yield %>
+  </body>
+</html>
